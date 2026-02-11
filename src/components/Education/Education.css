@@ -1,0 +1,183 @@
+.education-section {
+  background: #eef2f7; /* Light gray */
+  padding: 90px 6%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  margin: 0;              /* removes extra space below heading */
+  color: #222;
+}
+
+.title-underline {
+  width: 90px;
+  height: 4px;
+  background: #8245ec;    /* same theme color */
+  margin: 6px auto 16px auto; /* close to heading, space before content */
+  border-radius: 4px;
+}
+
+/* TIMELINE LAYOUT */
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #d1d5db;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* LEFT TEXT */
+.timeline-left {
+  width: 40%;
+  text-align: right;
+  padding-right: 40px;
+}
+
+.timeline-left h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.timeline-left span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* CENTER ICON */
+.timeline-center {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.timeline-icon {
+  background: #111827;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  z-index: 2;
+  border: 4px solid #eef2f7;
+}
+.timeline-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* RIGHT CARD */
+.timeline-right {
+  width: 40%;
+  padding-left: 40px;
+}
+
+.edu-card {
+  background: white;
+  padding: 22px 24px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+}
+
+/* College Name with Logo */
+.college-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.college-name img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.card-line {
+  width: 50px;
+  height: 3px;
+  background: #ec4899;
+  margin: 10px 0 14px 0;
+  border-radius: 4px;
+}
+
+.edu-card p {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* RESPONSIVE */
+
+  /* ================= MOBILE FIX FOR EDUCATION TIMELINE ================= */
+@media (max-width: 768px) {
+
+  .education-section {
+    padding: 60px 20px; /* reduce side padding */
+  }
+
+  /* Remove left timeline spacing */
+  .education-timeline {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  /* Hide the vertical timeline line */
+  .education-timeline::before {
+    display: none;
+  }
+
+  /* Each education card full width */
+  .education-card {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  /* Remove left dots/icons alignment */
+  .education-dot {
+    display: none;
+  }
+
+  /* Fix text overflow */
+  .education-card h3,
+  .education-card p {
+    word-wrap: break-word;
+  }
+}

@@ -1,0 +1,107 @@
+.contact-section {
+  padding: 100px 5%;
+  background: linear-gradient(135deg, #0f0c29, #1a1a40, #24243e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-title {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 15px;
+}
+
+.contact-title h2 {
+  font-size: 38px;
+  margin: 0;
+  color: white;
+}
+
+.title-underline {
+  width: 90px;
+  height: 6px;
+  background: #8245ec;
+  margin: 8px auto 18px auto; /* close to title, space before text */
+  border-radius: 4px;
+}
+
+.contact-subtext {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+}
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  animation: slideIn 0.4s ease forwards;
+  z-index: 9999;
+}
+
+.toast.success {
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+}
+
+.toast.error {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,157 @@
+/* Section Background — slightly lighter dark */
+.projects-section {
+  padding: 80px 10%;
+  background: #161b22; /* softer than pure black */
+  color: white;
+}
+
+/* Header */
+.projects-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 15px; /* prevents text touching edges on mobile */
+}
+
+.projects-header h2 {
+  font-size: 40px;
+  margin: 0;              /* removes extra space under heading */
+
+}
+
+.projects-header .underline {
+  width: 90px;
+  height: 4px;
+  background: #8245ec;
+  margin: 6px auto 14px auto;  /* tight to title, space before paragraph */
+  border-radius: 4px;
+}
+
+.projects-header p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 16px;
+  color:  #b0b0b0;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.projects-container {
+  display: grid;
+  /* This forces exactly 3 columns */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card */
+.project-card {
+  background: #1c222b;
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  border: 1px solid #222831;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Project Logo */
+.project-image {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.project-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* prevents cutting */
+}
+
+/* Title */
+.project-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.project-description {
+  font-size: 14px;
+  color: #c7c7c7;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Tech Tags */
+.tech-tags {
+  margin-bottom: 18px;
+}
+
+.tech-tags span {
+  display: inline-block;
+  background: #0f141a;
+  color: #00d8ff;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid #00d8ff33;
+}
+
+/* Buttons */
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.btn {
+  padding: 9px 15px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* Repo Button */
+.repo-btn {
+  background: #24292e;
+  color: white;
+}
+
+.repo-btn:hover {
+  background: black;
+}
+
+/* Demo Button */
+.demo-btn {
+  background: #00d8ff;
+  color: black;
+}
+
+.demo-btn:hover {
+  background: #00bcd4;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .project-buttons {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}

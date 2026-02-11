@@ -1,0 +1,175 @@
+/* ===== ABOUT SECTION ===== */
+.about {
+  padding: 100px 10%;
+  background: linear-gradient(to bottom right, #f9f9ff, #eef1ff);
+}
+
+/* ===== TITLE ===== */
+/* TITLE WRAPPER */
+.about-title {
+  text-align: center;
+  margin-bottom: 40px; /* space before content starts */
+}
+
+/* HEADING */
+.about-title h2 {
+  font-size: 36px;
+  color: #222;
+  font-weight: bold;
+  margin: 0;              /* ❗ removes default big gap */
+  line-height: 1.2;
+}
+
+/* UNDERLINE */
+.underline {
+  width: 90px;
+  height: 4px;
+  background: #4eb5c2;
+  margin: 8px auto 0 auto;  /* 🔥 small space between title & line */
+  border-radius: 2px;
+}
+
+/* ===== LAYOUT ===== */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+/* ===== IMAGE SIDE ===== */
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ===== TILT WRAPPER ===== */
+.profile-tilt {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden; /* makes image perfectly circular */
+  border: 5px solid #7c3aed;
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ===== IMAGE ===== */
+.profile-tilt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== HOVER GLOW ===== */
+.profile-tilt:hover {
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.7);
+}
+
+/* ===== TEXT ===== */
+.about-content {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* ===== FLOATING ANIMATION ===== */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+.about-hire-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  /* Add these to ensure clickability */
+  position: relative; 
+  gap: 50px;
+  z-index: 10;
+  margin-left: 190px;
+}
+
+.hire-me-btn {
+  background-color: #4eb5c2;
+  color: white;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer; /* This MUST show the hand icon */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 20px rgba(78, 181, 194, 0.3);
+  
+  /* Add this to force click events to register */
+  pointer-events: auto; 
+}
+
+.hire-me-btn:hover {
+  transform: scale(1.1) translateY(-5px);
+  background-color: #3d9aa6;
+  box-shadow: 0 15px 25px rgba(78, 181, 194, 0.4);
+}
+
+.hire-me-btn:active {
+  transform: scale(0.95);
+}
+.download-resume a {
+  text-decoration: none;   /* removes underline */
+}
+.download-resume-btn {
+  background-color: #4eb5c2; 
+  color: white;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 20px rgba(78, 181, 194, 0.3);
+  text-decoration: none;
+}
+
+.download-resume-btn:hover {
+  transform: scale(1.1) translateY(-5px);
+  background-color: #3d9aa6;
+  box-shadow: 0 15px 25px rgba(78, 181, 194, 0.4);
+}
+
+.download-resume-btn:active {
+  transform: scale(0.95);
+}
+/* Ensure About section has enough padding */
+.about {
+  padding: 100px 5%;
+  background-color: #0b111a; /* Matching your dark theme */
+  color: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-content {
+    font-size: 16px;
+  }
+
+  .profile-tilt {
+    width: 200px;
+    height: 200px;
+  }
+}
