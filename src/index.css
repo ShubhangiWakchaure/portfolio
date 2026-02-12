@@ -7,5 +7,12 @@ body {
 html {
   scroll-behavior: smooth;
 }
+/* Prevent horizontal scrolling on mobile */
+* {
+  box-sizing: border-box;
+}
 
+body {
+  overflow-x: hidden;
+}
   

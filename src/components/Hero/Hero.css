@@ -1,14 +1,16 @@
 .hero {
-  height: 100vh;
+  min-height: 100vh; /* better than fixed height */
   background-image: url("../../assets/hero_background.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;   /* ⭐ THIS CREATES PARALLAX */
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 0 20px; /* prevent edge touching on small screens */
 }
+
 
 /* Dark overlay for readability */
 /* Dark overlay */
@@ -102,7 +104,7 @@
 }
 
 /* 📱 Mobile Responsive */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .hero-title {
     font-size: 2.2rem;
   }
